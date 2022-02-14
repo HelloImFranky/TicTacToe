@@ -1,0 +1,124 @@
+*{
+    font-family: cursive;
+    font-size: .73in;
+}
+
+html{
+    background-color: rgba(231, 231, 220, 0.959);
+}
+
+.containerBox {
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height:100%;
+}
+table{
+    display: block;
+    border-collapse: collapse;
+    border: 10px groove rgba(168, 132, 97, 0.767);
+    margin: 0.5em;
+    margin-left: 0.6em;
+    background-image: url(DarkerWood.jpg);
+}
+
+h1 {
+    font-size: 70%;
+    color: rgb(117, 78, 23);
+}
+
+td {
+    border: 10px groove rgba(168, 132, 97, 0.767);
+    width: 1.0in;
+    height: 1.0in;
+    text-align: center;
+    color: rgba(230, 190, 132, 0.959);
+}
+
+.winner {
+    color: green;
+}
+
+.moveButton {
+    border-left: 0 white solid;
+    border-right: 0 white solid;
+    border-bottom: 0 white solid;
+
+}
+
+td.left{
+    border-left: 0 white solid;
+
+}
+td.right{
+    border-right: 0 white solid;
+}
+
+td.top{
+    border-top: 0 white solid;
+}
+
+td.bottom{
+    border-bottom: 0 white solid;
+}
+
+button {
+    font-size: 30px;
+    width: 2in;
+    border-radius: 2em;
+    border-width: 0.5em;
+    border-color: rgb(85, 67, 35);
+    background: burlywood;
+}
+
+.winnerBox{
+    padding: 1em;
+    margin-left:0.5em;
+    display:none;
+    margin-top: 0.5em;
+}
+
+.makeItNice {
+    display:block;
+    animation-name: slidein;
+    animation-duration: 1000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    z-index: 1;
+}
+
+.resizeMe {
+    display:none;
+    size: 100px;
+    animation-name: resize;
+    animation-duration: 1000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    z-index: -1;
+}
+
+
+
+@keyframes slidein {
+    0% {
+        transform: rotate(20deg);
+        transform: scale(0.5);
+    }
+    100% {
+        transform: rotate(-20deg);
+        transform: scale(2);
+    }
+}
+
+@keyframes resize {
+    0% {
+        transform: scale(0); 
+    }
+    100% {
+        transform: scale(0.5); 
+    }
+}
